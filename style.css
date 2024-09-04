@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .btn-primary {
+        border-radius: 25px;
+        background: linear-gradient(95deg, #0EB4F2 0%, #1D72EA 40%, #3B84ED 60%, #0BA6FF 100%);
+        color: #ffffff;
+        font-size: 12px;
+    }
+  }

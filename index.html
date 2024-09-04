@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital@0;1&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily : {
+            'montserrat': ['Montserrat', 'system-ui'],
+            'lato': ['Lato', 'system-ui'],
+            'opensans': ['Open Sans', 'system-ui'],
+          },
+          fontSize: {
+            '12' : '0.75rem',
+            '14' : '0.875rem',
+            '18' : '1.125rem',
+            '20' : '1.25rem',
+            '24' : '1.5rem',
+            '28' : '1.75rem',
+            '48' : '3rem',
+            '56' : '3.5rem',
+            '64' : '4rem',
+            '80': '5rem',
+          }, 
+          borderWidth: {
+            '1' : '1px',
+          },
+          extend: {
+            colors: {
+              'primary':"#000",
+              'white': '#FFFFFF',
+              'lowwhite': 'rgba(255,255,255,0.24',
+              'secondary': '#878E95',
+              'form': '#1F1F1F',
+              'link': '#00A0DB',
+              'heading' : '#0EB4F2',
+              'info' : '#11B4F0',
+              'cards' : '#EDEFF1',
+              'sponsors' : 'rgba(36, 31, 31, 0.35)',
+              'name' : '#0BA6FF',
+              'formbg' : '#F5F7FA',
+              'gray' : '#D1D1D1',
+              'privacy' : '#808080',
+              'police' : '#317AE2',
+              'support' : 'rgba(206, 206, 206, 0.57)',
+              'fan' : 'rgba(206, 206, 206, 0.57);', 
+              'email' : 'rgba(255, 255, 255, 0.24)',
+            },
+            spacing: {
+              '3/10': '30%',
+              '62' : '62%',
+              '30' : '120px',
+              '22' : '88px',
+              '7/10' : '70%',
+              '12.5' : '50px',
+            },
+            gridTemplateColumns: {
+              'custom' : '1fr 1fr 2fr',
+              'forms' : '2fr 3fr',
+              'footer' : '7fr 3fr 4fr',
+              'line' : 'repeat(15, minmax(0, 1fr))',
+            },
+            boxShadow: {
+              'custom': '1px 1px 3px 0px rgba(0, 0, 0, 0.04)',
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-montserrat max-w-1890">
+    <header class="header bg-primary flex gap-12">
+      <a class="header__logo text-white text-64 font-bold pl-16" href="index.html">AV-AVIONICS</a>
+      <div class="header__info mt-7">
+        <p class="font-black text-white text-18">Reach the heights of free flight with our advanced technologies.</p>
+        <p class="text-secondary font-medium text-18">Get in touch with us <span class="text-link"><a href="tel:0950183643">+38 (095) 018-36-43</a></span><span class="text-link ml-2"><a href="mailto:avavionicscompany@gmail.com">avavionicscompany@gmail.com</a></span></p>
+      </div>
+    </header>
+    <section class="image">
+      <img class="min-w-full h-auto" src="img/bayraktar.jpg" alt="bayraktar photo">
+    </section>
+    <section class="aviation">
+      <h2 class="aviation__heading text-heading text-48 font-semibold mx-16">AVIATION VIEW</h2>
+      <div class="aviation__cards mx-auto w-11/12 grid gap-y-12 grid-cols-2 grid-rows-2 relative mb-20">
+        <div class="aviation__cards__item bg-cards rounded-lg p-4 w-11/12">
+          <h5 class="font-semibold text-20">HARDWARE DEVELOPMENT</h5>
+          <p class="font-medium">The process of designing and creating physical electronic components and systems.</p>
+          <div class="aviation__cards__item__imgs flex justify-between mt-10">
+            <img class="w-3/10 h-4/10" src="img/card1.png" alt="Analog Devices">
+            <img class="w-3/10 h-4/10" src="img/card2.png" alt="KiCad">
+            <img class="w-3/10 h-4/10" src="img/card3.png" alt="Texas Instruments">
+          </div>
+        </div>
+        <div class="aviation__cards__item bg-cards rounded-lg p-4 row-start-2 w-11/12">
+          <h5 class="font-semibold text-20">SOFTWARE DEVELOPMENT</h5>
+          <p class="font-medium">It encompasses the development of software that controls hardware and facilitates user interaction.</p>
+          <div class="aviation__cards__item__imgs flex justify-between mt-10">
+            <img class="w-1/4 h-1/5" src="img/card4.png" alt="Life auamented">
+            <img class="w-1/4 h-3/10" src="img/card5.png" alt="OpenGL">
+            <img class="w-1/4 h-3/10" src="img/card6.png" alt="DWIN">
+          </div>
+        </div>
+        <div class="aviation__cards__item bg-cards rounded-lg p-4 pb-0 row-start-2 w-11/12 justify-self-end">
+          <h5 class="font-semibold text-20">MODELING</h5>
+          <p class="font-medium">The process of creating virtual or mathematical models of a system to analyze its behavior and properties.</p>
+          <div class="aviation__cards__item__imgs flex justify-between mt-10">
+            <img class="w-2/5 h-3/10" src="img/card7.png" alt="Ansys">
+            <img class="w-2/5 h-3/10 -mt-7" src="img/card8.png" alt="Matlab">
+          </div>
+        </div>
+        <img class="aviation__cards__img absolute w-96 h-72 left-62 bottom-1/2" src="img/screen.png" alt="screen">
+      </div>
+    </section>
+    <section class="systeam bg-black">
+      <h2 class="systeam__heading font-semibold text-white text-center text-56 pl-28 pt-10">PRODUCTS SYSTEAM</h2>
+      <div class="systeam__cards w-11/12 mx-auto pb-10 grid grid-cols-custom text-white">
+        <div class="systeam__cards__item">
+          <img class="-mt-20" src="img/aviation.png" alt="aviation">
+          <h3 class="font-bold text-24 leading-6 pl-20">Avionics</h3>
+          <p class="text-info pl-2 py-4">Ground Station UAV and Aviation</p>
+          <button class="font-lato ml-14 text-12 text-white rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 py-3 px-12">Learn more</button>
+        </div>
+        <div class="systeam__cards__item mt-10">
+          <img class="ml-12 mb-16" src="img/chip.png" alt="chip">
+          <h3 class="font-bold text-24 text-center leading-6 ml-20 mb-1">Flight Controller UAV</h3>
+          <p class="text-info pl-28 py-1">Drone Kamikaze / FPV</p>
+          <button class="font-lato ml-28 mt-2 text-12 text-white rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 py-3 px-12">Learn more</button>
+        </div>
+        <div class="systeam__cards__item">
+          <img class="w-4/5 ml-16 mt-14 h-3/5 mb-14" src="img/avionics.png" alt="">
+          <div class="systeam__cards__item__container flex">
+            <div class="systeam__cards__item__container__description -mt-4">
+              <h3 class="font-bold text-24 leading-6 ml-14">Digital Video UAV</h3>
+              <p class="text-info ml-12 py-3 w-4/5 text-center">Digital UAV video link 20-200 km</p>
+              <button class="font-lato ml-22 -mt-8 text-12 text-white rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 py-3 px-12">Learn more</button>
+            </div>
+            <div class="systeam__cards__item__container__description -mt-4">
+              <h3 class="font-bold text-24 leading-6 pl-24 text-nowrap">Digital Video UAV</h3>
+              <p class="text-info pl-24 py-4 w-4/5 text-center text-nowrap">Military Navigation System</p>
+              <button class="font-lato ml-30 mt-2 text-12 text-white rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 py-3 px-12">Learn more</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sponsors bg-black">
+      <div class="sponsors__container w-7/10 mx-auto grid grid-cols-5 gap-8">
+        <div class="sponsors__container__item bg-sponsors">
+          <img class="mx-auto px-2" src="img/mdu.png" alt="Ministry of Defence of Ukraine">
+          <p class="text-center text-name text-14 w-2/3 mx-auto pb-2">Ministry of Defence of Ukraine</p>          
+        </div>
+        <div class="sponsors__container__item bg-sponsors">
+          <img class="mx-auto px-2" src="img/ulf.png" alt="Ukrainian Land Forces">
+          <p class="text-center text-name text-14 w-2/3 mx-auto">Ukrainian Land Forces</p>
+        </div>
+        <div class="sponsors__container__item bg-sponsors">
+          <img class="mx-auto px-2 pt-6" src="img/vector.png" alt="AK Vector">
+          <p class="text-center text-name text-14 mt-8">AK Vector</p>
+        </div>
+        <div class="sponsors__container__item bg-sponsors">
+          <img class="mx-auto px-2 pt-10" src="img/aviasich.png" alt="Aviasich">
+          <p class="text-center text-name text-14 mt-12.5">Aviasich</p>
+        </div>
+        <div class="sponsors__container__item bg-sponsors">
+          <img class="mx-auto px-6 pt-5" src="img/stemhub.png" alt="Steam HUB">
+          <p class="text-center text-name text-14 mt-3">Steam HUB</p>
+        </div>
+      </div>
+    </section>
+    <section class="form">
+      <div class="form__container bg-formbg w-3/5 grid grid-cols-forms p-6 pl-0 mt-12 mb-16 mx-auto">
+        <div class="form__container__contacts mx-auto">
+          <div class="form__container__contacts__address text-center">
+            <h3 class="text-20 font-medium">Address</h3>
+            <p class="text-14 ">Kyiv, Ukraine</p>
+          </div>
+          <div class="form__container__contacts__phone text-center mt-3">
+            <h3 class="text-20 font-medium">Phone</h3>
+            <a href="tel:+380950183643" class="text-14">+38 095 018-36-43</a>
+          </div>
+          <div class="form__container__contacts__mail text-center mt-3">
+            <h3 class="text-20 font-medium">E-mail</h3>
+            <a href="mailto:avavionicscompany@gmail.com" class="text-14">avavionicscompany@gmail.com</a>
+          </div>
+          <img class="mx-auto shadow-2xl mt-8" src="img/pdf.png" alt="pdf">
+          <div class="form__container__contacts__company text-center">
+            <h2 class="text-24 mt-12">Company profile</h2>
+            <p class="mt-4">Learn more about our company,  products, and areas of operations.</p>
+            <button class="font-lato mt-4 text-12 text-white rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 py-3 px-12">Download</button>
+          </div>
+        </div>
+        <div class="form__container__sign mx-auto px-6 py-4 bg-white">
+          <h2 class="text-24">We’re always glad to answer your questions!</h2>
+          <form class="w-11/12 mx-auto text-form font-opensans" action="">
+            <p class="text-12 mt-4">Please fill the form below if you have any questions.</p>
+            <div class="form__container__sign__field mt-1">
+              <label class="text-12" for="name">Name</label>
+              <input class="border-gray border-1 rounded shadow-custom w-full" type="text" id="name" name="name" required>
+            </div>
+            <div class="form__container__sign__field mt-1">
+              <label class="text-12" for="email">Email</label>
+              <input class="border-gray border-1 rounded shadow-custom w-full" type="text" id="email" name="email" required>
+            </div>
+            <div class="form__container__sign__field mt-1">
+              <label class="text-12" for="phone">Phone number (optional)</label>
+              <input class="border-gray border-1 rounded shadow-custom w-full" type="text" id="phone" name="phone number">
+            </div>
+            <div class="form__container__sign__field mt-1">
+              <label class="text-12" for="company">Company (optional)</label>
+              <input class="border-gray border-1 rounded shadow-custom w-full" type="text" id="company" name="company">
+            </div>
+            <div class="form__container__sign__field mt-1">
+              <label class="text-12" for="message">Message (optional)</label>
+              <textarea class="block border-gray border-1 rounded shadow-custom w-full min-h-20 resize-none" id="message" name="company"></textarea>
+            </div>
+            <button class="font-lato w-full text-12 text-white rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 py-2 mt-5">Sent</button>
+          </form>
+          <p class="font-opensans text-12 text-privacy w-11/12 mx-auto mt-1">Never share sensitive information (credit card numbers, social security numbers, passwords) through this form.</p>
+          <p class="font-opensans text-12 text-privacy w-11/12 mx-auto mt-1">This site is protected by reCAPTCHA and the Google <span class="text-police">Privacy Policy</span> and <span class="text-police">Terms of Service</span> apply.</p>
+        </div>
+      </div>
+    </section>
+    <footer class="footer bg-black pl-16 p-6">
+      <div class="footer__container w-11/12 grid grid-cols-footer">
+        <div class="footer__container__logo">
+          <a class="text-white text-64 font-bold" href="index.html">AV-AVIONICS</a>
+          <p class="text-white">Have questions? <br> +38 095 018-36-43</p>
+          <p class="text-12 text-support mt-2">24/7 dedicated customer support</p>
+        </div>
+        <div class="footer__container__contacts">
+          <nav class="footer__container__contacts__nav">
+            <ul class="text-white mt-5 leading-9">
+              <li><a class="" href="#">About us</a></li>
+              <li><a class="" href="#">Contact</a></li>
+              <li><a class="" href="#">Follow us</a></li>
+            </ul>
+          </nav>
+          <div class="footer__container__contacts__icons w-4/5 flex items-center justify-between">
+            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" viewBox="0 0 23 21" fill="none">
+              <path d="M2.83521 4.83694C1.26871 4.83694 0 3.75539 0 2.41977C0 1.08296 1.26871 0 2.83521 0C4.4002 0 5.66891 1.08296 5.66891 2.41977C5.66891 3.75539 4.4002 4.83694 2.83521 4.83694ZM0.649492 20.3862V6.67848H5.73393V20.3862H0.649492ZM12.87 12.7622V20.2111H7.79391V6.50339H12.87V8.34883C14.2057 6.73667 15.3663 6.07134 17.4705 6.07134C19.5765 6.07134 23 7.00469 23 12.4186V20.2111H17.9383V12.7246C17.9383 11.1902 17.4705 9.65302 15.5681 9.65302C13.6656 9.65302 12.87 11.1902 12.87 12.7622Z" fill="white"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="38" viewBox="0 0 36 38" fill="none">
+              <path d="M15.3431 29.6875H19.0275V19.0052H21.7915L22.3381 15.6674H19.0275V13.2487C19.0275 12.469 19.5051 11.6503 20.1878 11.6503H22.0692V8.3125H19.7633V8.32746C16.1554 8.46569 15.4141 10.6713 15.3498 12.9882H15.3431V15.6674H13.5V19.0052H15.3431V29.6875Z" fill="white"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="36" viewBox="0 0 32 36" fill="none">
+              <path d="M30.2639 15.0773C30.0792 13.3355 29.6936 12.8278 29.4205 12.5915C28.9867 12.2239 28.1995 12.0926 27.1472 12.0138C25.4603 11.8913 22.5926 11.8125 19.5 11.8125C16.3994 11.8125 13.5397 11.8825 11.8528 12.0138C10.8005 12.0926 10.0133 12.2239 9.57953 12.5915C9.30641 12.8278 8.92887 13.3355 8.73609 15.0773C8.46297 17.5893 8.46297 23.3137 8.73609 25.8257C8.92887 27.5675 9.30641 28.0752 9.57953 28.3115C10.0133 28.6791 10.8005 28.8104 11.8528 28.8892C13.5397 29.0117 16.3994 29.0905 19.5 29.0905C22.6006 29.0905 25.4603 29.0117 27.1472 28.8892C28.1995 28.8104 28.9867 28.6791 29.4205 28.3115C29.6936 28.0839 30.0711 27.5675 30.2639 25.8257C30.537 23.3137 30.537 17.5893 30.2639 15.0773ZM16.8492 24.2064V16.6878L23.4682 20.4427L16.8492 24.2064Z" fill="white"/>
+            </svg>
+            <svg class="mt-3" xmlns="http://www.w3.org/2000/svg" width="32" height="29" viewBox="0 0 32 29" fill="none">
+              <path d="M14.933 0.207031C11.1274 0.207031 8 3.06054 8 6.54136V15.4156C8 18.8926 11.1232 21.7499 14.933 21.7499H24.6459C28.4516 21.7499 31.5789 18.8964 31.5789 15.4156V6.54136C31.5789 3.06437 28.4557 0.207031 24.6459 0.207031H14.933ZM14.933 2.16547H24.6459C27.2961 2.16547 29.4354 4.12009 29.4354 6.54136V15.4156C29.4354 17.8368 27.2961 19.7914 24.6459 19.7914H14.933C12.2829 19.7914 10.1435 17.8368 10.1435 15.4156V6.54136C10.1435 4.12009 12.2829 2.16547 14.933 2.16547ZM26.1196 4.30752C25.5795 4.30752 25.1483 4.7015 25.1483 5.19494C25.1483 5.68837 25.5795 6.08236 26.1196 6.08236C26.6597 6.08236 27.0909 5.68837 27.0909 5.19494C27.0909 4.7015 26.6597 4.30752 26.1196 4.30752ZM19.7895 5.10314C16.2518 5.10314 13.3589 7.74627 13.3589 10.9785C13.3589 14.2107 16.2518 16.8538 19.7895 16.8538C23.3272 16.8538 26.2201 14.2107 26.2201 10.9785C26.2201 7.74627 23.3272 5.10314 19.7895 5.10314ZM19.7895 7.06158C22.1716 7.06158 24.0766 8.80199 24.0766 10.9785C24.0766 13.1549 22.1716 14.8953 19.7895 14.8953C17.4073 14.8953 15.5024 13.1549 15.5024 10.9785C15.5024 8.80199 17.4073 7.06158 19.7895 7.06158Z" fill="white"/>
+            </svg>
+          </div>
+        </div>
+        <div class="footer__container__fan">
+          <h4 class="text-white mt-6">Are you a aviation owner or a fan?</h4>
+          <p class="text-fan text-12 leading-5 mt-2">Enter your email, and we will update you <br> with How-tos, tips, and the latest news on <br> drones & new system aviation!</p>
+          <form action="" method="post" class="mt-4 flex items-center justify-between bg-email px-4 py-2 rounded-full w-max">
+            <input type="email" placeholder="Email*" class="bg-transparent text-white outline-none placeholder-lowwhite"/>
+            <button type="submit">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M23.016 3.98379L13.272 20.0158C13.128 20.2798 12.792 20.3518 12.528 20.1838L9.84002 18.3598L7.12802 20.1598C6.91202 20.3038 6.62402 20.1598 6.62402 19.8958V16.1518L18.984 6.91179L4.39202 14.6398L1.17602 12.4318C0.816019 12.1918 0.888019 11.6638 1.29602 11.5198L22.824 3.74379C22.968 3.67179 23.112 3.83979 23.016 3.98379Z" fill="#16B5EC"/>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="footer__line grid grid-cols-line">
+        <div class="col-span-10 col-start-4 border-solid border-b-1 border-white opacity-20 mt-6"></div>
+      </div>
+    </footer>
+</body>
+</html>
